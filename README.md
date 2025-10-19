@@ -52,6 +52,7 @@ The dataset contains marketing and customer experience metrics/KPIs for an onlin
 - Geography Table – Provides geographic details about customers
 
 - Products Table – Provides product information
+![Screenshot of Model View in Power BI](dashboard_visuals/01-modelView.png "Model View in Power BI")
 ## Database Setup
 
 I chose PostgreSQL for this project, leveraging my experience with it from my previous Trend Bites full-stack web app. The original dataset was provided in a Microsoft SQL Server format, so I used DBeaver to efficiently migrate all tables into my PostgreSQL environment.

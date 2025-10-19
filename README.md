@@ -229,9 +229,10 @@ See all SQL queries for data preparation and analysis in this folder here: [`SQL
 4. ### Customer Reviews Analysis
 
 - **Product Ratings**
+    ![Screenshot of Customer Review Table Chart](dashboard_visuals/08-best-product-rating.png "The product with the best reviews")
 
     - Best Product: Climbing Rope – 3.91
-    
+    ![Screenshot of Customer Review Table Chart](dashboard_visuals/09-worst-product-rating.png "The product with the worst reviews")
     - Worst Product: Golf Clubs – 3.48
 
 - **By Gender Highest/Lowest**
@@ -241,7 +242,7 @@ See all SQL queries for data preparation and analysis in this folder here: [`SQL
     - Females: Dumbbells 3.91 / Boxing Gloves 3.39
 
 - **Review Distribution**
-
+![Screenshot of Content Type Performance Chart](dashboard_visuals/10-customer-reviews.png "Total Customer Reviews Chart")
     - 5 stars: 409
     
     - 4 stars: 431
@@ -253,6 +254,7 @@ See all SQL queries for data preparation and analysis in this folder here: [`SQL
     - 1 star: 80
 
 - **Sentiment Analysis**
+![Screenshot of Content Type Performance Chart](dashboard_visuals/11-review-sentiment.png "Total Customer Sentiments Chart")
 
     - Positive: 840
     

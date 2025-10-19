@@ -1,5 +1,7 @@
 # Marketing Analytics Project
-After learning Power BI, SQL, and Python, I decided to deepen my skills by analyzing a real-world dataset and tackling a practical marketing problem. The goal is to gain insights into customer behavior, campaign effectiveness, and overall customer experience for an online retail business.
+After learning Power BI, SQL, and Python, I decided to deepen my skills by analyzing a real-world dataset and tackling a practical marketing problem.
+
+The goal is to gain insights into customer behavior, campaign effectiveness, and overall customer experience for an online retail business, ultimately providing actionable recommendations to boost conversion rates and engagement.
 
 ## Sample Data
 The dataset contains marketing and customer experience metrics/KPIs for an online retail business. The aim is to export, clean, and analyze this data to understand trends, performance gaps, and opportunities for improvement.
@@ -63,6 +65,82 @@ I chose PostgreSQL for this project, leveraging my experience with it from my pr
 - Built Power BI dashboards with bookmarks and pop-up filter panels (Filter by Gender, Sentiment Category, Product)
 
 - Analyzed trends and identified areas for improvement
+
+## Technical Implementation & Code Highlights
+While the full SQL queries and Python scripts are available in the repository, this section highlights key code snippets that were central to the analysis.
+
+1. ### Python: Advanced Sentiment Analysis
+To analyze customer reviews, I used Python with Pandas, NLTK (VADER), and Psycopg2 to connect directly to the PostgreSQL database.
+
+Instead of a simple positive/negative classification, I developed a custom function that combines the VADER sentiment score of the review text with the customer's star rating. This created more nuanced categories like "Mixed Positive" (e.g., positive text but a 3-star rating) and "Mixed Negative", providing a much more accurate picture of customer sentiment.
+
+```python
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
+sia = SentimentIntensityAnalyzer()
+
+# This function creates nuanced sentiment categories by combining VADER's text score 
+# with the user's star rating.
+def categorize_sentiment(score, rating):
+    if score > 0.05:  # Positive text
+        if rating >= 4:
+            return "Positive"
+        elif rating == 3:
+            return "Mixed Positive"
+        else: # Ratings 1-2
+            return "Mixed Negative"
+    elif score < -0.05:  # Negative text
+        if rating <= 2:
+            return "Negative"
+        elif rating == 3:
+            return "Mixed Negative"
+        else: # Ratings 4-5
+            return "Mixed Positive"
+    else:  # Neutral text
+        if rating >= 4:
+            return "Positive"
+        elif rating <= 2:
+            return "Negative"
+        else: # Rating is 3
+            return "Neutral"
+
+# Apply the custom function to each row of the DataFrame
+df['sentiment_category'] = df.apply(
+    lambda row: categorize_sentiment(row['sentiment_score'], row['rating']), axis=1
+)
+```
+See the full Python script for data fetching, processing, and analysis: 
+
+2. ### SQL:
+
+```sql
+    
+-- Clean and prepare the customer_journey table for analysis
+SELECT
+    cj.journeyid,
+    cj.customerid,
+    cj.productid,
+    cj.visitdate,
+    cj.stage,
+    -- If 'duration' is NULL, replace it with the calculated average for that day
+    COALESCE(cj.duration, cj.avg_duration) AS duration
+FROM (
+    SELECT
+        *,
+        -- Calculate the average duration for each day to use for imputation
+        AVG(duration) OVER (PARTITION BY visitdate) AS avg_duration,
+        -- Assign a unique row number to duplicate events to enable filtering
+        ROW_NUMBER() OVER (
+            PARTITION BY customerid, productid, visitdate, stage, "Action" 
+            ORDER BY journeyid
+        ) AS row_num
+    FROM
+        customer_journey
+) AS cj
+WHERE
+    cj.row_num = 1; -- Keep only the first unique event, effectively removing duplicates
+```
+See all SQL queries for data preparation and analysis here:
 
 ## Analysis
 1. ### Overall Customer & KPI Summary

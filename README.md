@@ -109,7 +109,7 @@ df['sentiment_category'] = df.apply(
     lambda row: categorize_sentiment(row['sentiment_score'], row['rating']), axis=1
 )
 ```
-See the full Python script for data fetching, processing, and analysis: 
+See the full Python script for data fetching, processing, and analysis: [`sentiment.py`](Python%20Script/sentiment.py)
 
 2. ### SQL:
 

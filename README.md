@@ -146,6 +146,7 @@ WHERE
 See all SQL queries for data preparation and analysis in this folder here: [`SQL Queries`](SQL%20Queries/)
 
 ## Analysis
+![Dashboard Overall Analysis](dashboard_visuals/02-overall-analysis.png "Overall Analysis")
 1. ### Overall Customer & KPI Summary
 
 - **Customer Reviews**
@@ -186,19 +187,21 @@ See all SQL queries for data preparation and analysis in this folder here: [`SQL
     - Gender: 1,878 M / 2,321 F
 
 2. ### Conversion Analysis
+![Screenshot of General Conversion Rate Chart](dashboard_visuals/03-conversionRate-general.png "General Conversion Rate")
 
 - **General Trend**
 
     - September and December showed strong conversions after January’s peak, indicating seasonal and campaign effects.
 
-- **Lowest Conversion Month**
 
+- **Lowest Conversion Month**
+![Screenshot of Conversion Rate Table](dashboard_visuals/04-conversionRate-lowestMonth.png "Conversion Rate Table in October")
     - October: 6.11%
     
     - Almost no product performed well, signaling a critical area for targeted marketing and optimization.
 
 - **Highest Conversion Month**
-
+![Screenshot of Conversion Rate Table](dashboard_visuals/05-conversionRate-highestMonth.png "Conversion Rate Table in Januray")
     - January: 17.31%
     
     - Ski Boots achieved 100% conversion — everyone who viewed the product purchased it. Likely due to seasonal demand and highly targeted marketing.
@@ -206,6 +209,7 @@ See all SQL queries for data preparation and analysis in this folder here: [`SQL
 3. ### Customer Engagement Analysis
 
 - **Content Type Performance:**
+![Screenshot of Content Type Performance Chart](dashboard_visuals/06-content-type-engagement.png "Content Type Performance Chart")
 
     - Blog posts drove the most views overall (January: 349,970; April: 346,031)
     
@@ -214,6 +218,7 @@ See all SQL queries for data preparation and analysis in this folder here: [`SQL
     - Social media content is a close second overall
 
 - **Interaction vs. Views:**
+![Screenshot of Content Type Performance Chart](dashboard_visuals/07-social-activity.png "Social Media Performance Line Chart")
 
     - Clicks and likes are much lower than views, showing a need for more engaging content
 

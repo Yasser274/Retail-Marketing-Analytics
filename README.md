@@ -146,7 +146,9 @@ WHERE
 See all SQL queries for data preparation and analysis in this folder here: [`SQL Queries`](SQL%20Queries/)
 
 ## Analysis
+
 ![Dashboard Overall Analysis](dashboard_visuals/02-overall-analysis.png "Overall Analysis")
+
 1. ### Overall Customer & KPI Summary
 
 - **Customer Reviews**
@@ -187,6 +189,7 @@ See all SQL queries for data preparation and analysis in this folder here: [`SQL
     - Gender: 1,878 M / 2,321 F
 
 2. ### Conversion Analysis
+
 ![Screenshot of General Conversion Rate Chart](dashboard_visuals/03-conversionRate-general.png "General Conversion Rate")
 
 - **General Trend**
@@ -195,13 +198,17 @@ See all SQL queries for data preparation and analysis in this folder here: [`SQL
 
 
 - **Lowest Conversion Month**
-![Screenshot of Conversion Rate Table](dashboard_visuals/04-conversionRate-lowestMonth.png "Conversion Rate Table in October")
+
+    ![Screenshot of Conversion Rate Table](dashboard_visuals/04-conversionRate-lowestMonth.png "Conversion Rate Table in October")
+  
     - October: 6.11%
     
     - Almost no product performed well, signaling a critical area for targeted marketing and optimization.
 
 - **Highest Conversion Month**
-![Screenshot of Conversion Rate Table](dashboard_visuals/05-conversionRate-highestMonth.png "Conversion Rate Table in Januray")
+
+    ![Screenshot of Conversion Rate Table](dashboard_visuals/05-conversionRate-highestMonth.png "Conversion Rate Table in Januray")
+  
     - January: 17.31%
     
     - Ski Boots achieved 100% conversion — everyone who viewed the product purchased it. Likely due to seasonal demand and highly targeted marketing.
@@ -209,7 +216,8 @@ See all SQL queries for data preparation and analysis in this folder here: [`SQL
 3. ### Customer Engagement Analysis
 
 - **Content Type Performance:**
-![Screenshot of Content Type Performance Chart](dashboard_visuals/06-content-type-engagement.png "Content Type Performance Chart")
+
+    ![Screenshot of Content Type Performance Chart](dashboard_visuals/06-content-type-engagement.png "Content Type Performance Chart")
 
     - Blog posts drove the most views overall (January: 349,970; April: 346,031)
     
@@ -218,7 +226,8 @@ See all SQL queries for data preparation and analysis in this folder here: [`SQL
     - Social media content is a close second overall
 
 - **Interaction vs. Views:**
-![Screenshot of Content Type Performance Chart](dashboard_visuals/07-social-activity.png "Social Media Performance Line Chart")
+
+    ![Screenshot of Content Type Performance Chart](dashboard_visuals/07-social-activity.png "Social Media Performance Line Chart")
 
     - Clicks and likes are much lower than views, showing a need for more engaging content
 
@@ -229,10 +238,13 @@ See all SQL queries for data preparation and analysis in this folder here: [`SQL
 4. ### Customer Reviews Analysis
 
 - **Product Ratings**
+
     ![Screenshot of Customer Review Table Chart](dashboard_visuals/08-best-product-rating.png "The product with the best reviews")
 
     - Best Product: Climbing Rope – 3.91
+  
     ![Screenshot of Customer Review Table Chart](dashboard_visuals/09-worst-product-rating.png "The product with the worst reviews")
+  
     - Worst Product: Golf Clubs – 3.48
 
 - **By Gender Highest/Lowest**
@@ -242,7 +254,9 @@ See all SQL queries for data preparation and analysis in this folder here: [`SQL
     - Females: Dumbbells 3.91 / Boxing Gloves 3.39
 
 - **Review Distribution**
-![Screenshot of Content Type Performance Chart](dashboard_visuals/10-customer-reviews.png "Total Customer Reviews Chart")
+
+    ![Screenshot of Content Type Performance Chart](dashboard_visuals/10-customer-reviews.png "Total Customer Reviews Chart")
+  
     - 5 stars: 409
     
     - 4 stars: 431
@@ -254,7 +268,8 @@ See all SQL queries for data preparation and analysis in this folder here: [`SQL
     - 1 star: 80
 
 - **Sentiment Analysis**
-![Screenshot of Content Type Performance Chart](dashboard_visuals/11-review-sentiment.png "Total Customer Sentiments Chart")
+
+    ![Screenshot of Content Type Performance Chart](dashboard_visuals/11-review-sentiment.png "Total Customer Sentiments Chart")
 
     - Positive: 840
     

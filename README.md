@@ -1,4 +1,6 @@
 # Marketing Analytics Project
+![Screenshot of Dashboard Overall Page](dashboard_visuals/00-main_dashboard.png "Dashboard Overall Page")
+
 After learning Power BI, SQL, and Python, I decided to deepen my skills by analyzing a real-world dataset and tackling a practical marketing problem.
 
 The goal is to gain insights into customer behavior, campaign effectiveness, and overall customer experience for an online retail business, ultimately providing actionable recommendations to boost conversion rates and engagement.

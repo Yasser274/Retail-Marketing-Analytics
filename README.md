@@ -140,7 +140,7 @@ FROM (
 WHERE
     cj.row_num = 1; -- Keep only the first unique event, effectively removing duplicates
 ```
-See all SQL queries for data preparation and analysis here:
+See all SQL queries for data preparation and analysis in this folder here: [`SQL Queries`](SQL%20Queries/)
 
 ## Analysis
 1. ### Overall Customer & KPI Summary

@@ -305,3 +305,6 @@ See all SQL queries for data preparation and analysis in this folder here: [`SQL
       - **Goal:** Understand recurring feedback themes and improve products/services
       
       - **Action:** Follow up with customers who left negative or mixed reviews to understand pain points and encourage updated ratings. Aim for an average rating of 4.0
+
+## Dashboard Demonstration
+[Watch a complete video of the dashboard in action](dashboard_visuals/Full-Dashboard.mp4 "The Entire Dashboard")
